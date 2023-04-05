@@ -259,7 +259,12 @@ function Objekt3()
 
     var sait = new Pinguin3("Sait", 50, 7);
 
+    Pinguin3.prototype.slowbro = function (){
+        this.geschwindigkeit = this.geschwindigkeit - 1;
+    };
+
     sait.gehschneller(3);
+    sait.slowbro();
     window.alert(sait.geschwindigkeit);
 }
 
@@ -285,6 +290,38 @@ function input()
 
     event3.appendChild(paragpaph);
 }
+
+// Daten auszugeben und ändern
+function fDate()
+{
+    var vDate = new Date().getTime();
+    var nDate = new Date(vDate + 7*24*60*60*1000);
+
+    var aktuellesDatum = new Date().toUTCString();
+    window.alert(aktuellesDatum);
+}
+
+function* generator()
+{
+    //yield* ['Hello', 'World']; // Beide schreibeweise sind gleiche.
+    yield 'Hello';
+    yield 'World';
+}
+
+function outGenerator()
+{
+    /*
+    var gen = generator();
+    window.alert(gen.next().value);
+    window.alert(gen.next().value);
+    */
+
+    for(let i of generator())
+    {
+        window.alert(i); 
+    }
+}
+
 
 
 
