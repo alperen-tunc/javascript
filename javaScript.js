@@ -319,7 +319,7 @@ function outGenerator()
     for(let i of generator())
     {
         window.alert(i); 
-    }
+    } 
 }
 
 
