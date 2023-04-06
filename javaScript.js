@@ -68,9 +68,9 @@ document.writeln("<\p><h2>Mathe Sachen..</h2><\p>");
 var x = Math.round(Math.random()*100+100);
 var y = Math.round(Math.random()*100+100);
 
-document.writeln("<\p>Max Zahl von x und y" + Math.max(x,y));
+document.writeln("<\p>Max Zahl von x und y = " + Math.max(x,y));
 
-document.writeln("<\p>Min Zahl von x un y" + Math.min(x,y));
+document.writeln("<\p>Min Zahl von x und y = " + Math.min(x,y));
 
 document.writeln("<\p>PI: " + Math.PI);
 
@@ -321,6 +321,26 @@ function outGenerator()
         window.alert(i); 
     } 
 }
+
+// Arrow
+function fArrow()
+{
+    function Player(health)
+    {
+        this.health = health;
+    }
+    
+    Player.prototype.getPowerUp = function (myarr) {
+    //var that = this; das ist für alte schreibweise!!!
+     return myarr.map(t => this.health * t);
+    }
+
+    var player = new Player(100);
+    window.alert(player.getPowerUp( [1,2,3,4,5,6,7]));
+    const squared = arr.map(function (t) { return t * t }); // oder so für Lambda (item) => item * item
+}
+
+ 
 
 
 
