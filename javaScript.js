@@ -340,7 +340,20 @@ function fArrow()
     const squared = arr.map(function (t) { return t * t }); // oder so für Lambda (item) => item * item
 }
 
- 
+function aaa()
+{
+    const a = {
+        i: 1,
+        toString: function(){
+            return a.i++;
+        }
+    }
+
+    if(a == 1 && a == 2 && a==3)
+    {
+        window.alert("Funktioniert");
+    }
+}
 
 
 
