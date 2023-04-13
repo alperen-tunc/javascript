@@ -355,6 +355,14 @@ function aaa()
     }
 }
 
+function dateZeiger()
+{
+    var currentDate = new Date();
+    var currentYear = currentDate.getFullYear();
+    var currentYearAsInt = Number(currentYear);
+    window.alert(currentYearAsInt);  
+}
+
 
 
 
